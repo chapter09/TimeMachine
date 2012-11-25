@@ -24,4 +24,15 @@ public class StartActivity extends Activity {
 		return true;
 	}
 
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+//			case R.id.settings:
+//				startActivity(new Intent(this, Settings.class));
+//				return true;
+// More items go here (if any) ...
+		}
+		return false;
+	}
+
 }

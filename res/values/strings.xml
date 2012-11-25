@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">TimeMachine</string>
+    <string name="menu_today">Today</string>
+    <string name="menu_reg_pub">Reg Pub</string>
+    <string name="menu_stat">Statis</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_run">Run</string>
+    <string name="menu_about">About</string>
 </resources>
