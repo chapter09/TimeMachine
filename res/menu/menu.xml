@@ -9,8 +9,8 @@
           android:title="@string/menu_stat"/>
     <item android:id="@+id/menu_settings"
           android:title="@string/menu_settings"/>
-    <item android:id="@+id/menu_run"
-           android:title="@string/menu_run"/>
+    <item android:id="@+id/menu_todo"
+           android:title="@string/menu_todo"/>
     <item android:id="@+id/menu_about"
           android:title="@string/menu_about"/>
 </menu>

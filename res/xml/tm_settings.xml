@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+            android:title="Time Machine Settings"
+            android:key="pref_key_storage_settings">
+        <PreferenceScreen
+                android:key="account"
+                android:summary="set your account for Reg Pub"
+                android:title="Account">
+            <EditTextPreference
+                    android:key="user_name"
+                    android:summary="set your user name"
+                    android:title="User Name"/>
+            <EditTextPreference
+                    android:key="password"
+                    android:summary="set your passowrd"
+                    android:title="Password"/>
+        </PreferenceScreen>
+        <Preference
+                android:key="run_time"
+                android:summary="set the Pomodoro Time"
+                android:title="Pomodoro Time"/>
+        <Preference
+                android:key="sync"
+                android:summary="sync data with server"
+                android:title="Sync Up"/>
+    </PreferenceCategory>
+</PreferenceScreen>

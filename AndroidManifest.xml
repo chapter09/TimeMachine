@@ -32,6 +32,7 @@
 
         <activity android:name=".StatisticsActivity" />
         <activity android:name=".StartActivity" />
+        <activity android:name=".TodoActivity" />
 
     </application>
 </manifest> 
