@@ -25,7 +25,8 @@
         </activity>
 
         <activity android:name=".TodayActivity"/>
-        <activity android:name=".RunActivity"/>
+        <activity android:name=".RunActivity"
+                android:theme="@android:style/Theme.Dialog"/>
         <activity android:name=".StatisticsActivity"/>
         <activity android:name=".RegularActivity"/>
         <activity android:name=".SettingsActivity"/>

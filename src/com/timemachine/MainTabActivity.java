@@ -41,7 +41,7 @@ public class MainTabActivity extends TabActivity implements OnCheckedChangeListe
 		.setOnCheckedChangeListener(this);
         ((RadioButton) findViewById(R.id.radio_button4))
 		.setOnCheckedChangeListener(this);
-        
+
         setupIntent();
     }
 
