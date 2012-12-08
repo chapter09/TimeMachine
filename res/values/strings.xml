@@ -8,5 +8,6 @@
     <string name="menu_todo">Todo</string>
     <string name="menu_about">About</string>
     <string name="hello">Hello World, MainTabActivity!</string>
+    <string name="splash">splash</string>
     <string name="today_run">Run</string>
 </resources>
