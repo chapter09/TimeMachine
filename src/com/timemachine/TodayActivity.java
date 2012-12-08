@@ -9,11 +9,9 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ListView;
-import android.widget.TextView;
+import android.widget.*;
 
-public class TodayActivity extends Activity implements View.OnClickListener {
+public class TodayActivity extends ListActivity implements View.OnClickListener {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 //		super.onCreate(savedInstanceState);
@@ -28,13 +26,30 @@ public class TodayActivity extends Activity implements View.OnClickListener {
 //		TextView tv = new TextView(this);
 //		SharedPreferences pre = PreferenceManager.getDefaultSharedPreferences(this);
 		super.onCreate(savedInstanceState);
-
-		TextView tv = new TextView(this);
-		tv.setText("This is C Activity!");
-		tv.setGravity(Gravity.CENTER);
-		setContentView(tv);
+		ListAdapter adapter = createAdapter();
+		setListAdapter(adapter);
+//		TextView tv = new TextView(this);
+//		tv.setText("This is C Activity!");
+//		tv.setGravity(Gravity.CENTER);
+//		setContentView(tv);
 
 	}
+
+	protected ListAdapter createAdapter()
+	{
+		String[] testValues = new String[] {
+				"Test1",
+				"Test2",
+				"Test3"
+		};
+
+		// Create a simple array adapter (of type string) with the test values
+		ListAdapter adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_checked, testValues);
+
+		return adapter;
+	}
+
+
 
 	@Override
 	public void onClick(View view) {
