@@ -19,10 +19,6 @@ import java.util.List;
 
 
 public class TodayActivity extends ListActivity {
-//	static final String[] FRUITS = new String[]{"Apple", "Avocado", "Banana",
-//			"Blueberry", "Coconut", "Durian", "Guava", "Kiwifruit",
-//			"Jackfruit", "Mango", "Olive", "Pear", "Sugar-apple"};
-
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -85,6 +81,7 @@ public class TodayActivity extends ListActivity {
 		list.get(1).setSelected(true);
 		return list;
 	}
+
 
 	private Model get(String s) {
 		return new Model(s);

@@ -21,7 +21,7 @@ public class RunActivity extends Activity{
 		counter.start();
 }
 
-	//countdowntimer is an abstract class, so extend it and fill in methods
+	//countdown timer is an abstract class, so extend it and fill in methods
 	public class MyCount extends CountDownTimer {
 		public MyCount(long millisInFuture, long countDownInterval) {
 			super(millisInFuture, countDownInterval);
