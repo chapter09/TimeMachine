@@ -1,6 +1,7 @@
 package com.timemachine;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -33,10 +34,13 @@ public class SettingsActivity extends PreferenceActivity implements	SharedPrefer
 	public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
 		String key = preference.getKey();
 		if( key != null ){
-			if(key.equals("about")) {
-				Intent intent = new Intent(this, RunActivity.class);
+			if (key.equals("about")) {
+				Intent intent = new Intent(this, About.class);
 				startActivity(intent);
-//				showDialog(1);
+				//				showDialog(1);
+				//Todo: Change Sync preference to the XML
+			} else if(key.equals("sync")) {
+				showAlertDialog(this);
 			}
 		}
 		return super.onPreferenceTreeClick(preferenceScreen, preference);
@@ -51,5 +55,30 @@ public class SettingsActivity extends PreferenceActivity implements	SharedPrefer
 
 //			System.out.println(lp.getValue());
 		}
+	}
+
+	public void showAlertDialog(Context context)
+	{
+		AlertDialog.Builder builder=new AlertDialog.Builder(context);
+		builder.setIcon(R.drawable.sync_icon);
+		builder.setTitle("Sync Up with Server");
+		builder.setMessage("sync up...");
+
+		builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				System.out.println("You Click the PositiveButton");
+				setTitle("PositiveButton");
+			}
+		});
+
+		builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				System.out.println("You Click NegativeButton");
+				setTitle("NegativeButton");
+			}
+		});
+		builder.show();// 弹出提示框
 	}
 }

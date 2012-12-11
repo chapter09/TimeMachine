@@ -17,13 +17,35 @@
                     android:summary="set your passowrd"
                     android:title="Password"/>
         </PreferenceScreen>
-        <Preference
-                android:key="run_time"
+        <ListPreference
+                android:key="run_time_list"
                 android:summary="set the Pomodoro Time"
-                android:title="Pomodoro Time"/>
+                android:title="Pomodoro Time"
+                android:defaultValue="25"
+                android:entries="@array/run_time_list_preference"
+                android:entryValues="@array/run_time_value_list_preference" />
+        <RingtonePreference
+                android:key="ringtone"
+                android:summary="set ringtone for alert"
+                android:title="Alert RingTone"
+                android:showDefault="true"
+                android:ringtoneType="alarm"
+                />
         <Preference
                 android:key="sync"
                 android:summary="sync data with server"
                 android:title="Sync Up"/>
+        <Preference
+                android:key="about"
+                android:summary="about Time Machine"
+                android:title="About"/>
+        <Preference
+                android:key="test"
+                android:summary="Test"
+                android:title="Test">
+            <intent
+                    android:action="android.intent.action.VIEW"
+                    />
+        </Preference>
     </PreferenceCategory>
 </PreferenceScreen>

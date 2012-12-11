@@ -3,9 +3,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="fill_parent"
               android:layout_height="wrap_content">
-    <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:id="@+id/today_run"
-            android:text="@string/today_run"/>
+    <ListView
+            android:id="@+id/today_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+    </ListView>
 </LinearLayout>

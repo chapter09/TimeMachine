@@ -25,5 +25,9 @@
         <activity android:name=".StatisticsActivity" />
         <activity android:name=".StartActivity" />
         <activity android:name=".TodoActivity" />
+        <activity android:name=".About"
+                  android:label="About Time Machine"
+                  android:theme="@android:style/Theme.Dialog"/>
+        <activity android:name=".TaskEditor" />
     </application>
 </manifest> 

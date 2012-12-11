@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">TimeMachine</string>
+    <string name="app_name">Time\nMachine</string>
     <string name="menu_today">Today</string>
     <string name="menu_reg_pub">Reg Pub</string>
     <string name="menu_stat">Statis</string>
@@ -10,4 +10,10 @@
     <string name="hello">Hello World, MainTabActivity!</string>
     <string name="splash">splash</string>
     <string name="today_run">Run</string>
+    <string name="about_text">Time Machine combines the to-do List with the Regular
+        Pub, besides, Pomodoro Time. \nIt will be a good assistant in your daily life
+        and study\n\n
+        <b>P.S.钱总爱你哟~</b>
+    </string>
+    <string name="checkBoxDefault"></string>
 </resources>

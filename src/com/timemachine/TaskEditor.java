@@ -1,16 +1,16 @@
 package com.timemachine;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.os.Bundle;
+
 /**
  * Created by IntelliJ IDEA.
  * User: haow
  * Date: 12-12-9
- * Time: 上午12:21
+ * Time: 下午9:14
  */
-public class About extends Activity {
+public class TaskEditor extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.about);
 	}
 }

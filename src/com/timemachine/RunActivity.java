@@ -17,7 +17,7 @@ public class RunActivity extends Activity{
 		this.setContentView(tv);
 		//5000 is the starting number (in milliseconds)
 		//1000 is the number to count down each time (in milliseconds)
-		MyCount counter = new MyCount(60000,1000);
+		MyCount counter = new MyCount(1500000,1000);
 		counter.start();
 }
 
