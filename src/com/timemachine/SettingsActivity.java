@@ -69,6 +69,8 @@ public class SettingsActivity extends PreferenceActivity implements	SharedPrefer
 			public void onClick(DialogInterface dialog, int which) {
 				System.out.println("You Click the PositiveButton");
 				setTitle("PositiveButton");
+                Intent intent = new Intent(SettingsActivity.this, SyncActivity.class);
+                SettingsActivity.this.startActivity(intent);
 			}
 		});
 

@@ -15,7 +15,8 @@
             <EditTextPreference
                     android:key="password"
                     android:summary="set your passowrd"
-                    android:title="Password"/>
+                    android:title="Password"
+                    android:password="true"/>
         </PreferenceScreen>
         <ListPreference
                 android:key="run_time_list"

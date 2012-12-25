@@ -15,6 +15,7 @@ import android.widget.TextView;
  * User: haow
  * Date: 12-12-9
  * Time: 下午9:00
+ * add R
  */
 public class TMArrayAdapter extends ArrayAdapter<Model> {
 	private final List<Model> list;
@@ -44,7 +45,7 @@ public class TMArrayAdapter extends ArrayAdapter<Model> {
 			LayoutInflater inflator = context.getLayoutInflater();
 			view = inflator.inflate(R.layout.task_entry, null);
 			final ViewHolder viewHolder = new ViewHolder();
-			viewHolder.textView = (TextView) view.findViewById(R.id.task);
+			viewHolder.textView = (TextView) view.findViewById(R.id.sqlID);
 			viewHolder.checkBox = (CheckBox) view.findViewById(R.id.checkBox);
 			viewHolder.checkBox
 					.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

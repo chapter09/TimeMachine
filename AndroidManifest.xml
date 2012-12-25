@@ -3,9 +3,12 @@
           package="com.timemachine"
           android:versionCode="1"
           android:versionName="1.0">
-    <uses-sdk android:minSdkVersion="10" />
+    <uses-sdk android:minSdkVersion="10"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application android:icon="@drawable/ic_launcher"
-                 android:label="@string/app_name">
+                 android:label="@string/app_name"
+                 android:screenOrientation="portrait">
         <activity android:name=".Splash"
                   android:label="@string/app_name">
             <intent-filter>
@@ -29,5 +32,6 @@
                   android:label="About Time Machine"
                   android:theme="@android:style/Theme.Dialog"/>
         <activity android:name=".TaskEditor" />
+        <activity android:name=".SyncActivity"/>
     </application>
 </manifest> 
