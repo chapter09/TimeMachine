@@ -61,7 +61,7 @@ public class SettingsActivity extends PreferenceActivity implements	SharedPrefer
 	{
 		AlertDialog.Builder builder=new AlertDialog.Builder(context);
 		builder.setIcon(R.drawable.sync_icon);
-		builder.setTitle("Sync Up with Server");
+		builder.setTitle(R.string.alert_sync_title);
 		builder.setMessage("sync up...");
 
 		builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {

@@ -98,3 +98,24 @@ public class HTTPCommunicate {
         return result;
     }
 }
+
+/*
+{user_id: xxx,
+		tasknew:[
+				{description:"1",createtime:1,deadline:1,donetime:1,priority:1,status:1,type:1,workload:1,doneworkload:1},
+				{time:"",		}
+		],
+        taskdirty:[
+            {id:1,time:"",		},
+            {id:2,time:"",		}
+        ],
+        regularnew:[
+            {time:"",		},
+            {time:"",		}
+        ],
+        regulardirty:[
+            {id:1,time:"",		},
+            {id:2,time:"",		}
+        ]
+}
+ */

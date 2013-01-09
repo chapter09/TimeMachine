@@ -5,11 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import org.apache.http.HttpResponse;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import org.json.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -31,11 +27,18 @@ public class SyncActivity extends Activity {
         sync_up_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String response = HTTPCommunicate.sendGet("http://218.193.187.184:3333/TimeMachine/sync", null);
-                text.setText(response);
+                String str = "{user_id:1,tasknew:[{description:\"1\",createtime:1,deadline:1},{description:\"1\",createtime:1,deadline:1}]}\n";
+                JSONObject jsonObject = null;
+                try {
+                    jsonObject = new JSONObject(str);
+                    String response = HTTPCommunicate.sendPost(
+                        "http://192.168.1.31:8080//TimeMachine/sync",
+                        "str="+jsonObject.toString());
+                    text.setText(response);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
             }
         });
-
-
     }
 }

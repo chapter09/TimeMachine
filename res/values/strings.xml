@@ -11,6 +11,7 @@
     <string name="splash">splash</string>
     <string name="today_run">Run</string>
     <string name="add_btn">Add</string>
+    <string name="alert_sync_title">Sync with the remote server</string>
     <string name="about_text">Time Machine combines the to-do List with the Regular
         Pub, besides, Pomodoro Time. \nIt will be a good assistant in your daily life
         and study\n\n
@@ -20,4 +21,13 @@
     <string name="checkBoxDefault"></string>
     <string name="sqlIDDefault"/>
     <string name="colorBarDefault"/>
+    <string name="regular">Regular</string>
+    <string name="task">Todo</string>
+    <string name="add_item">Add Your Task/Regular</string>
+    <string name="add_task">Add Task</string>
+    <string name="add_task_name">Task Name</string>
+    <string name="set_task_time">Set Time</string>
+    <string name="add_task_done">OK</string>
+    <string name="set_priority">Priority</string>
+    <string name="important">Important!</string>
 </resources>

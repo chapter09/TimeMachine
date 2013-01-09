@@ -1,0 +1,20 @@
+<resources>
+    <string-array name="run_time_list_preference">
+        <item>25 分钟</item>
+        <item>45 分钟</item>
+        <item>60 分钟</item>
+    </string-array>
+    <string-array name="run_time_value_list_preference">
+        <item>25</item>
+        <item>45</item>
+        <item>60</item>
+    </string-array>
+    <string-array name="language_list_preference">
+        <item>English</item>
+        <item>中文</item>
+    </string-array>
+    <string-array name="language_value_list_preference">
+        <item>eng</item>
+        <item>ch</item>
+    </string-array>
+</resources>

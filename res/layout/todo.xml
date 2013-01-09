@@ -4,6 +4,7 @@
               android:layout_width="fill_parent"
               android:layout_height="fill_parent">
     <RelativeLayout
+            android:layout_marginTop="4dp"
             android:id="@+id/InnerRelativeLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -20,7 +21,7 @@
         </Button>
 
         <EditText
-                android:id="@+id/EditText"
+                android:id="@+id/task_name"
                 android:layout_width="fill_parent"
                 android:layout_toLeftOf="@id/AddButton"
                 android:layout_height="wrap_content"

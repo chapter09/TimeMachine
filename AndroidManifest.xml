@@ -33,5 +33,9 @@
                   android:theme="@android:style/Theme.Dialog"/>
         <activity android:name=".TaskEditor" />
         <activity android:name=".SyncActivity"/>
+        <activity android:name=".AddTask"
+                  android:theme="@android:style/Theme.Dialog"
+                />
+        <activity android:name=".SetTimeActivity"/>
     </application>
 </manifest> 

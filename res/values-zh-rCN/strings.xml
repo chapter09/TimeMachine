@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Time\nMachine</string>
+    <string name="menu_today">今日</string>
+    <string name="menu_reg_pub">习惯</string>
+    <string name="menu_stat">统计</string>
+    <string name="menu_settings">设置</string>
+    <string name="menu_todo">任务</string>
+    <string name="menu_about">关于</string>
+    <string name="hello">Hello World, MainTabActivity!</string>
+    <string name="splash">splash</string>
+    <string name="today_run">执行</string>
+    <string name="add_btn">添加</string>
+    <string name="alert_sync_title">与服务器同步</string>
+    <string name="about_text">Time Machine 结合了时间管理和习惯社区，
+        同时还加入了番茄时间法。\nTime Machine会成为您工作和学习中时间管理，习惯养成的
+        好助手\n\n
+        <b>P.S.钱总爱你哟~</b>
+    </string>
+    <string name="sync_up_btn">同步</string>
+    <string name="checkBoxDefault"></string>
+    <string name="sqlIDDefault"/>
+    <string name="colorBarDefault"/>
+</resources>

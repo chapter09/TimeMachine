@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    <TableRow android:layout_width="fill_parent"
+              android:baselineAligned="true"
+              android:layout_marginTop="4dp"
+              android:layout_height="wrap_content">
+        <TextView
+            android:text="@string/add_task_name"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            />
+        <EditText
+            android:id="@+id/task_name"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:selectAllOnFocus="true"
+            android:minWidth="180dp"
+            android:layout_marginLeft="20dp"/>
+    </TableRow>
+    <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/set_priority"
+                android:id="@+id/textView" android:layout_column="0"/>
+        <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/important"
+                android:id="@+id/checkBox" android:layout_column="1"/>
+    </TableRow>
+    <TextView
+            android:text="@string/set_task_time"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_gravity="center" android:layout_marginBottom="5dp"/>
+    <DatePicker
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/datePicker"
+            android:layout_column="1"/>
+    <TimePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timePicker"
+            android:layout_column="1"/>
+    <Button android:id="@+id/add_task_done"
+            android:text="@string/add_task_done"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            />
+</TableLayout>
