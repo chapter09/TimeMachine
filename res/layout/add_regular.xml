@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="false"
+        android:longClickable="false" android:focusableInTouchMode="true"
+        android:stretchColumns="1,2,3,4">
+    <TableRow android:layout_width="fill_parent"
+              android:baselineAligned="true"
+              android:layout_marginTop="4dp"
+              android:layout_height="wrap_content" android:orientation="vertical">
+        <TextView
+                android:text="@string/add_task_name"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                />
+        <EditText
+                android:id="@+id/name"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:selectAllOnFocus="true"
+                android:minWidth="180dp"
+                android:layout_span="4" android:layout_marginLeft="2dp"/>
+    </TableRow>
+    <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/set_priority"
+                android:id="@+id/textView"
+                android:layout_column="0"/>
+        <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/is_mon"
+                android:layout_column="1"
+                android:layout_span="1"
+                android:layout_marginLeft="2dp"
+                android:text="@string/mon"
+                android:textSize="9dp"/>
+        <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/is_tue"
+                android:layout_column="2"
+                android:layout_marginLeft="2dp"
+                android:text="@string/tue"
+                android:textSize="9dp"/>
+        <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/is_wed"
+                android:layout_column="3"
+                android:layout_marginLeft="2dp"
+                android:text="@string/wed"
+                android:textSize="9dp"/>
+        <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/is_thur"
+                android:layout_column="4"
+                android:layout_marginLeft="2dp"
+                android:text="@string/thur"
+                android:textSize="9dp"/>
+    </TableRow>
+    <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/is_fri"
+                android:layout_column="1"
+                android:layout_marginLeft="2dp"
+                android:text="@string/fri"
+                android:textSize="9dp"/>
+        <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/is_sat"
+                android:layout_column="2"
+                android:layout_marginLeft="2dp"
+                android:text="@string/sat"
+                android:textSize="9dp"/>
+        <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/is_sun"
+                android:layout_column="3"
+                android:layout_marginLeft="2dp"
+                android:text="@string/sun"
+                android:textSize="9dp"/>
+    </TableRow>
+    <TableRow android:layout_width="match_parent">
+        <TextView
+                android:text="@string/set_task_time"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="5dp"
+                android:layout_span="5"/>
+        </TableRow>
+    <TableRow android:layout_width="match_parent">
+        <TimePicker
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/timePicker"
+                android:layout_span="5" android:layout_gravity="center"/>
+    </TableRow>
+    <TableRow
+            android:layout_width="match_parent">
+    <Button android:id="@+id/add_task_done"
+            android:text="@string/add_task_done"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_span="5"/>
+    </TableRow>
+</TableLayout>

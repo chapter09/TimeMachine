@@ -2,14 +2,13 @@ package com.timemachine;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.content.ComponentName;
 import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.LabeledIntent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.*;
 import android.app.AlertDialog;
@@ -34,8 +33,8 @@ import android.app.AlertDialog;
 
 
 public class TodoActivity extends Activity {
-    private static final int EDIT_DELETE = 1;
-    private static final int ADD = 2;
+    private static final int ADD_TASK = 1;
+    private static final int ADD_REGULAR = 2;
     private static final int DIALOG_TASK_ADD = 10;
 
 
@@ -107,7 +106,7 @@ public class TodoActivity extends Activity {
                         i.putExtra("todo", cb.getText());
                         i.putExtra("id", tv.getText());
                         i.putExtra("state", "null");
-                        startActivityForResult(i, EDIT_DELETE);
+                        startActivityForResult(i, ADD_REGULAR);
 
                         return true; // if false is returned onItemClick() will do the job
                     }
@@ -126,18 +125,29 @@ public class TodoActivity extends Activity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 Bundle data = new Bundle();
-                EditText tv = (EditText) findViewById(R.id.task_name);
+                EditText tv = (EditText) findViewById(R.id.name);
                 Intent intent = new Intent(TodoActivity.this, AddTask.class);
-//                intent.putExtra("task_name", task_name);
                 String task_name = tv.getText().toString();
+                tv.setText("");
                 data.putString("task_name", task_name);
                 intent.putExtras(data);
-                startActivity(intent);
+                startActivityForResult(intent, ADD_TASK);
             }
         });
 
-
-        builder.setNegativeButton(R.string.regular, new CancelOnClickListener());
+        builder.setNegativeButton(R.string.regular, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Bundle data = new Bundle();
+                EditText tv = (EditText) findViewById(R.id.name);
+                Intent intent = new Intent(TodoActivity.this, AddRegular.class);
+                String task_name = tv.getText().toString();
+                tv.setText("");
+                data.putString("regular_name", task_name);
+                intent.putExtras(data);
+                startActivityForResult(intent, ADD_REGULAR);
+            }
+        });
         AlertDialog dialog = builder.create();
         dialog.show();
 
@@ -149,6 +159,37 @@ public class TodoActivity extends Activity {
         public void onClick(DialogInterface dialog, int which) {
             Toast.makeText(getApplicationContext(), "Activity will continue",
                     Toast.LENGTH_LONG).show();
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == RESULT_OK)
+        {
+            if(requestCode == ADD_TASK) {
+                long deadline = data.getLongExtra("deadline", 0);
+                int priority = data.getIntExtra("priority", 0);
+                String name = data.getStringExtra("name");
+                //get create time from epoch
+
+                Log.i("TEST", Long.toString(deadline));
+                Log.i("Priority", Integer.toString(priority));
+
+                ContentValues values = new ContentValues();
+//                values.put(TaskProvider.TODO, todo);
+//                values.put(TaskProvider.STATE, 0);
+//                getContentResolver().insert(TaskProvider.CONTENT_URI, values);
+            }
+            if(requestCode == ADD_REGULAR) {
+                int cycle = data.getIntExtra("cycle", 0);
+                String name = data.getStringExtra("name");
+                String time = data.getStringExtra("time");
+
+                ContentValues values = new ContentValues();
+
+            }
         }
     }
 

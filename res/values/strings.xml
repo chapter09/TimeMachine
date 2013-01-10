@@ -25,9 +25,19 @@
     <string name="task">Todo</string>
     <string name="add_item">Add Your Task/Regular</string>
     <string name="add_task">Add Task</string>
-    <string name="add_task_name">Task Name</string>
+    <string name="add_task_name">Name</string>
     <string name="set_task_time">Set Time</string>
     <string name="add_task_done">OK</string>
     <string name="set_priority">Priority</string>
     <string name="important">Important!</string>
+    <string name="mon">Mon</string>
+    <string name="tue">Tue</string>
+    <string name="wed">Wed</string>
+    <string name="thur">Thur</string>
+    <string name="fri">Fri</string>
+    <string name="sat">Sat</string>
+    <string name="sun">Sun</string>
+
+
+
 </resources>

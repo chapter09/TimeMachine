@@ -21,7 +21,7 @@
         </Button>
 
         <EditText
-                android:id="@+id/task_name"
+                android:id="@+id/name"
                 android:layout_width="fill_parent"
                 android:layout_toLeftOf="@id/AddButton"
                 android:layout_height="wrap_content"
