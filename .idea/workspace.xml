@@ -27,48 +27,50 @@
       </GlobalState>
     </option>
   </component>
-  <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="Prio" />
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="INFO" />
-  </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/com/timemachine/TodoActivity.java" line="24" />
-    <bookmark url="file://$PROJECT_DIR$/src/com/timemachine/AddTask.java" line="19" />
+    <bookmark url="file://$PROJECT_DIR$/src/com/timemachine/AddTask.java" line="20" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="226750d2-3bff-4ce6-845c-d6248f323856" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/timemachine/AddRegular.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/add_regular.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/timemachine/Regulars.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/timemachine/Tasks.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/sync.xml" />
+      <change type="DELETED" beforePath="C:\Users\wanghao\Documents\Lesson\软工\timemachine\src\app_client\TimeMachine\src\com\timemachine\TMArrayAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\wanghao\Documents\Lesson\软工\timemachine\src\app_client\TimeMachine\src\com\timemachine\TaskEditor.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/timemachine/AddRegular.java" afterPath="$PROJECT_DIR$/src/com/timemachine/AddRegular.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/timemachine/AddTask.java" afterPath="$PROJECT_DIR$/src/com/timemachine/AddTask.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/timemachine/Splash.java" afterPath="$PROJECT_DIR$/src/com/timemachine/Splash.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/timemachine/TaskProvider.java" afterPath="$PROJECT_DIR$/src/com/timemachine/TaskProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/timemachine/TaskViewBinder.java" afterPath="$PROJECT_DIR$/src/com/timemachine/TaskViewBinder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/timemachine/TodayActivity.java" afterPath="$PROJECT_DIR$/src/com/timemachine/TodayActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/timemachine/TodoActivity.java" afterPath="$PROJECT_DIR$/src/com/timemachine/TodoActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/add_task.xml" afterPath="$PROJECT_DIR$/res/layout/add_task.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/todo.xml" afterPath="$PROJECT_DIR$/res/layout/todo.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/task_entry.xml" afterPath="$PROJECT_DIR$/res/layout/task_entry.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/today.xml" afterPath="$PROJECT_DIR$/res/layout/today.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="dcd43c71-1e66-4789-b36f-9bc1406a859d" name="Rejected commit: Default" comment="add settings&#10;" />
     <ignored path="TimeMachine.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357770513610" ignored="false" />
-    <file path="/fragment.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357804860267" ignored="false" />
+    <file path="/Dummy.txt" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357833185545" ignored="false" />
+    <file path="/fragment.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357930977945" ignored="false" />
     <file path="$PROJECT_DIR$/.idea/modules.xml" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1355158197225" ignored="false" />
-    <file path="/TodayActivity.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1355236977362" ignored="false" />
+    <file path="/TodayActivity.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357932052733" ignored="false" />
     <file path="$USER_HOME$/Downloads/todo/caldavtodo/project.properties" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1355646345056" ignored="false" />
     <file path="/a.xml" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1355647580848" ignored="false" />
-    <file path="/TodoActivity.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357833112251" ignored="false" />
+    <file path="/TodoActivity.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357922726593" ignored="false" />
     <file path="/todo.xml" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357658171195" ignored="false" />
-    <file path="/strings.xml" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357803924891" ignored="false" />
-    <file path="/task_entry.xml" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1355670889265" ignored="false" />
+    <file path="/strings.xml" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357927789718" ignored="false" />
+    <file path="/task_entry.xml" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357929312753" ignored="false" />
     <file path="$USER_HOME$/Downloads/todo/weekdo/gen/com/weektodo/Manifest.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1355713542966" ignored="false" />
     <file path="$USER_HOME$/Downloads/todo/weekdo/gen/com/weektodo/BuildConfig.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1355713542966" ignored="false" />
     <file path="$USER_HOME$/Downloads/todo/weekdo/gen/com/weektodo/R.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1355713542966" ignored="false" />
     <file path="$USER_HOME$/Downloads/todo/caldavtodo/gen/ms/jung/andorid/caldavtodo/R.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1355713550737" ignored="false" />
     <file path="$USER_HOME$/Downloads/todo/caldavtodo/gen/ms/jung/andorid/caldavtodo/BuildConfig.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1355713550737" ignored="false" />
     <file path="$USER_HOME$/Downloads/todo/caldavtodo/gen/ms/jung/andorid/caldavtodo/Manifest.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1355713550737" ignored="false" />
-    <file path="/TaskProvider.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1356266026156" ignored="false" />
-    <file path="/TaskViewBinder.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1356271775619" ignored="false" />
+    <file path="/TaskProvider.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357914094028" ignored="false" />
+    <file path="/TaskViewBinder.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357912022994" ignored="false" />
     <file path="/TMArrayAdapter.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1356318711120" ignored="false" />
     <file path="/Sync.xml" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1356338111123" ignored="false" />
     <file path="/SyncActivity.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1356438651576" ignored="false" />
@@ -77,9 +79,9 @@
     <file path="/HTTPCommunicate.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1356343019835" ignored="false" />
     <file path="/tm_settings.xml" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1356443547255" ignored="false" />
     <file path="/arrays.xml" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1356443828961" ignored="false" />
-    <file path="/AddTask.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357832506345" ignored="false" />
+    <file path="/AddTask.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357921386721" ignored="false" />
     <file path="/add_task.xml" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357754302302" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357738868205" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357892608694" ignored="false" />
     <file path="$USER_HOME$/Downloads/todo/datetimepicker/.idea/workspace.xml" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357731767651" ignored="false" />
     <file path="$USER_HOME$/Downloads/todo/datetimepicker/.idea/misc.xml" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357731689450" ignored="false" />
     <file path="$USER_HOME$/Downloads/todo/datetimepicker/AndroidManifest.xml" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357731659305" ignored="false" />
@@ -97,10 +99,17 @@
     <file path="$USER_HOME$/Downloads/DateTimePicker/project.properties" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357732045785" ignored="false" />
     <file path="$USER_HOME$/Downloads/DateTimePicker/AndroidManifest.xml" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357732045785" ignored="false" />
     <file path="$USER_HOME$/Downloads/DateTimePicker/res/values/strings.xml" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357732045785" ignored="false" />
-    <file path="$USER_HOME$/Downloads/todo/caldavtodo/src/ms/jung/andorid/caldavtodo/CalDavToDoProvider.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357799193034" ignored="false" />
+    <file path="$USER_HOME$/Downloads/todo/caldavtodo/src/ms/jung/andorid/caldavtodo/CalDavToDoProvider.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357907612089" ignored="false" />
     <file path="/CalDavToDoProvider.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357765320458" ignored="false" />
     <file path="/AddRegular.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357832681011" ignored="false" />
     <file path="/add_regular.xml" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357804572555" ignored="false" />
+    <file path="/*.regexp" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357926953168" ignored="false" />
+    <file path="/Task.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357922841734" ignored="false" />
+    <file path="/Tasks.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357922807774" ignored="false" />
+    <file path="/Regulars.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357924819624" ignored="false" />
+    <file path="/Todos.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357921987030" ignored="false" />
+    <file path="/Todo.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357921830141" ignored="false" />
+    <file path="/today.xml" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357930577520" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,32 +172,23 @@
     <favorites_list name="TimeMachine" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5232904">
+    <splitter split-orientation="horizontal" split-proportion="0.48741558">
       <split-first>
         <leaf>
-          <file leaf-file-name="TaskEditor.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/timemachine/TaskEditor.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="15" column="1" selection-start="301" selection-end="302" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TodayActivity.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/timemachine/TodayActivity.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="83" column="0" selection-start="2385" selection-end="2385" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="TaskProvider.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/timemachine/TaskProvider.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="71" column="66" selection-start="2673" selection-end="2673" vertical-scroll-proportion="0.0">
-                  <folding />
+                <state line="58" column="24" selection-start="2191" selection-end="2191" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="docComment;class#TaskProvider#0" expanded="false" />
+                    <element signature="method#DatabaseHelper#0;class#DatabaseHelper#0;class#TaskProvider#0" expanded="false" />
+                    <element signature="method#onUpgrade#0;class#DatabaseHelper#0;class#TaskProvider#0" expanded="false" />
+                    <element signature="method#onCreate#0;class#TaskProvider#0" expanded="false" />
+                    <element signature="method#query#0;class#TaskProvider#0" expanded="false" />
+                    <element signature="method#getType#0;class#TaskProvider#0" expanded="false" />
+                    <element signature="method#delete#0;class#TaskProvider#0" expanded="false" />
+                    <element signature="method#update#0;class#TaskProvider#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -205,10 +205,25 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="TodoActivity.java" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/timemachine/TodoActivity.java">
+          <file leaf-file-name="task_entry.xml" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/res/layout/task_entry.xml">
+              <provider editor-type-id="android-designer">
+                <state />
+              </provider>
               <provider selected="true" editor-type-id="text-editor">
-                <state line="186" column="58" selection-start="6721" selection-end="6721" vertical-scroll-proportion="0.537065">
+                <state line="1" column="0" selection-start="39" selection-end="39" vertical-scroll-proportion="-0.60714287">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="today.xml" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/res/layout/today.xml">
+              <provider editor-type-id="android-designer">
+                <state />
+              </provider>
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="10" column="41" selection-start="477" selection-end="477" vertical-scroll-proportion="-6.071429">
                   <folding />
                 </state>
               </provider>
@@ -217,7 +232,32 @@
           <file leaf-file-name="AddTask.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/timemachine/AddTask.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="48" column="0" selection-start="1550" selection-end="1550" vertical-scroll-proportion="0.0">
+                <state line="43" column="52" selection-start="1295" selection-end="1295" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="TodoActivity.java" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/com/timemachine/TodoActivity.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="97" column="59" selection-start="3386" selection-end="3386" vertical-scroll-proportion="0.21521997">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#2010#2828#0" expanded="true" />
+                    <element signature="e#2809#2810#0" expanded="true" />
+                    <element signature="e#2902#3697#0" expanded="true" />
+                    <element signature="e#3678#3679#0" expanded="true" />
+                    <element signature="method#onActivityResult#0;class#TodoActivity#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="23" column="0" selection-start="1038" selection-end="1038" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -227,15 +267,6 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="SyncActivity.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/timemachine/SyncActivity.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="17" column="18" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="HTTPCommunicate.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/timemachine/HTTPCommunicate.java">
               <provider selected="true" editor-type-id="text-editor">
@@ -245,10 +276,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="AddRegular.java" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="AddRegular.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/timemachine/AddRegular.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="76" column="25" selection-start="2777" selection-end="2777" vertical-scroll-proportion="0.79878974">
+                <state line="68" column="42" selection-start="2403" selection-end="2403" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -259,6 +290,39 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state line="17" column="1" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0">
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Tasks.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/timemachine/Tasks.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="30" column="44" selection-start="1004" selection-end="1004" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Regulars.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/timemachine/Regulars.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="44" column="36" selection-start="1639" selection-end="1639" vertical-scroll-proportion="0.0">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="TodayActivity.java" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/com/timemachine/TodayActivity.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="52" column="28" selection-start="2049" selection-end="2049" vertical-scroll-proportion="1.0351288">
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -291,21 +355,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/xml-zh-rCN/tm_settings.xml" />
-        <option value="$PROJECT_DIR$/res/values-zh-rCN/arrays.xml" />
-        <option value="$PROJECT_DIR$/src/com/timemachine/TaskProvider.java" />
-        <option value="$PROJECT_DIR$/src/com/timemachine/SyncActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/timemachine/Splash.java" />
-        <option value="$PROJECT_DIR$/src/com/timemachine/TodayActivity.java" />
-        <option value="$PROJECT_DIR$/res/layout/todo.xml" />
-        <option value="$PROJECT_DIR$/src/com/timemachine/SetTimeActivity.java" />
-        <option value="$PROJECT_DIR$/src/AddRegular.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/res/layout/add_task.xml" />
-        <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/res/layout/add_regular.xml" />
+        <option value="$PROJECT_DIR$/src/com/timemachine/Task.java" />
+        <option value="$PROJECT_DIR$/src/com/timemachine/Todos.java" />
         <option value="$PROJECT_DIR$/src/com/timemachine/AddTask.java" />
+        <option value="$PROJECT_DIR$/src/com/timemachine/Todo.java" />
+        <option value="$PROJECT_DIR$/src/com/timemachine/Tasks.java" />
         <option value="$PROJECT_DIR$/src/com/timemachine/AddRegular.java" />
+        <option value="$PROJECT_DIR$/src/com/timemachine/Regulars.java" />
+        <option value="$PROJECT_DIR$/src/com/timemachine/TMArrayAdapter.java" />
+        <option value="$PROJECT_DIR$/src/com/timemachine/TaskViewBinder.java" />
+        <option value="$PROJECT_DIR$/src/com/timemachine/TaskProvider.java" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/res/layout/task_entry.xml" />
+        <option value="$PROJECT_DIR$/src/com/timemachine/Splash.java" />
+        <option value="$PROJECT_DIR$/res/layout/today.xml" />
+        <option value="$PROJECT_DIR$/src/com/timemachine/TodayActivity.java" />
         <option value="$PROJECT_DIR$/src/com/timemachine/TodoActivity.java" />
       </list>
     </option>
@@ -316,8 +380,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1456" />
-    <option name="height" value="886" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -626,6 +690,84 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TimeMachine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TimeMachine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TimeMachine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TimeMachine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="timemachine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TimeMachine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TimeMachine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TimeMachine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TimeMachine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TimeMachine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TimeMachine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -676,7 +818,7 @@
       <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
       <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="PREFERRED_AVD" value="MileStone2" />
+      <option name="PREFERRED_AVD" value="" />
       <option name="COMMAND_LINE" value="" />
       <option name="WIPE_USER_DATA" value="false" />
       <option name="DISABLE_BOOT_ANIMATION" value="false" />
@@ -923,43 +1065,47 @@
       <created>1357739996464</created>
       <updated>1357739996464</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add Add Regular">
+      <created>1357833203581</created>
+      <updated>1357833203581</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.7585446" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13247864" sideWeight="0.7585446" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24198718" sideWeight="0.7596472" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26526162" sideWeight="0.74971944" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39911798" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24035281" sideWeight="0.46474358" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2502806" sideWeight="0.5005353" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.6707989" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.4957265" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32855567" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2772166" sideWeight="0.99946237" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287483" sideWeight="0.4957265" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16118634" sideWeight="0.41493776" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294347" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39957264" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13002874" sideWeight="0.7585446" order="0" side_tool="false" content_ui="combo" x="1661" y="84" width="273" height="936" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24071527" sideWeight="0.9993386" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1298077" sideWeight="0.6714443" order="0" side_tool="false" content_ui="combo" x="1661" y="84" width="273" height="936" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24035281" sideWeight="0.5315171" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13247864" sideWeight="0.7596472" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26526162" sideWeight="0.74971944" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32855567" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39911798" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32855567" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2767365" sideWeight="0.99946237" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16118634" sideWeight="0.41493776" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39957264" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294347" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39889959" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884398" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -1000,7 +1146,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Add Task" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Add Regular" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1016,6 +1162,7 @@
     <MESSAGE value="add run + settings" />
     <MESSAGE value="add sync" />
     <MESSAGE value="add Add Task" />
+    <MESSAGE value="add Add Regular" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1059,13 +1206,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/timemachine/Splash.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="12" selection-start="1226" selection-end="1226" vertical-scroll-proportion="0.72671753">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/timemachine/HTTPCommunicate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="119" column="1" selection-start="3432" selection-end="3432" vertical-scroll-proportion="0.0">
@@ -1073,64 +1213,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/todo.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/com/timemachine/AddRegular.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="0" selection-start="1342" selection-end="1342" vertical-scroll-proportion="0.78">
+        <state line="68" column="42" selection-start="2403" selection-end="2403" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/timemachine/TodayActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/timemachine/AddTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="0" selection-start="2385" selection-end="2385" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/timemachine/TaskEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="1" selection-start="301" selection-end="302" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/add_task.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="72" column="0" selection-start="3023" selection-end="3023" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="61" selection-start="1686" selection-end="1686" vertical-scroll-proportion="0.6970387">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/timemachine/SetTimeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="1" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="35" selection-start="1502" selection-end="1502" vertical-scroll-proportion="0.61959">
+        <state line="43" column="52" selection-start="1295" selection-end="1295" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1145,38 +1237,108 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/timemachine/TaskViewBinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="2" selection-start="740" selection-end="740" vertical-scroll-proportion="0.2763466">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/timemachine/Regulars.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="36" selection-start="1639" selection-end="1639" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/timemachine/Tasks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="44" selection-start="1004" selection-end="1004" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="1038" selection-end="1038" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/timemachine/Splash.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="15" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.7484277">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/today.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="41" selection-start="477" selection-end="477" vertical-scroll-proportion="-6.071429">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="38" selection-start="1935" selection-end="1965" vertical-scroll-proportion="0.759434">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/task_entry.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="39" selection-end="39" vertical-scroll-proportion="-0.60714287">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/timemachine/TaskProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="66" selection-start="2673" selection-end="2673" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/timemachine/SyncActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="18" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/timemachine/AddTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="1550" selection-end="1550" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/timemachine/AddRegular.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="25" selection-start="2777" selection-end="2777" vertical-scroll-proportion="0.79878974">
-          <folding />
+        <state line="58" column="24" selection-start="2191" selection-end="2191" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="docComment;class#TaskProvider#0" expanded="false" />
+            <element signature="method#DatabaseHelper#0;class#DatabaseHelper#0;class#TaskProvider#0" expanded="false" />
+            <element signature="method#onUpgrade#0;class#DatabaseHelper#0;class#TaskProvider#0" expanded="false" />
+            <element signature="method#onCreate#0;class#TaskProvider#0" expanded="false" />
+            <element signature="method#query#0;class#TaskProvider#0" expanded="false" />
+            <element signature="method#getType#0;class#TaskProvider#0" expanded="false" />
+            <element signature="method#delete#0;class#TaskProvider#0" expanded="false" />
+            <element signature="method#update#0;class#TaskProvider#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/timemachine/TodoActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="186" column="58" selection-start="6721" selection-end="6721" vertical-scroll-proportion="0.537065">
-          <folding />
+        <state line="97" column="59" selection-start="3386" selection-end="3386" vertical-scroll-proportion="0.21521997">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2010#2828#0" expanded="true" />
+            <element signature="e#2809#2810#0" expanded="true" />
+            <element signature="e#2902#3697#0" expanded="true" />
+            <element signature="e#3678#3679#0" expanded="true" />
+            <element signature="method#onActivityResult#0;class#TodoActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/timemachine/TodayActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="28" selection-start="2049" selection-end="2049" vertical-scroll-proportion="1.0351288">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

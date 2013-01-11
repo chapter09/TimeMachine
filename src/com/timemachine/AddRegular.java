@@ -60,13 +60,13 @@ public class AddRegular extends Activity {
                 if (cb_tue.isChecked())
                     CYCLE += Math.pow(2, 2);
                 if (cb_wed.isChecked())
-                    CYCLE += Math.pow(2, 4);
+                    CYCLE += Math.pow(2, 3);
                 if (cb_thur.isChecked())
-                    CYCLE += Math.pow(2, 5);
+                    CYCLE += Math.pow(2, 4);
                 if (cb_fri.isChecked())
-                    CYCLE += Math.pow(2, 6);
+                    CYCLE += Math.pow(2, 5);
                 if (cb_sat.isChecked())
-                    CYCLE += Math.pow(2, 7);
+                    CYCLE += Math.pow(2, 6);
 
                 Intent intent = getIntent();
                 intent.putExtra("cycle", CYCLE);

@@ -2,6 +2,7 @@ package com.timemachine;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -13,6 +14,10 @@ import android.view.View;
 import android.widget.*;
 import android.app.AlertDialog;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 /**
  * Created by IntelliJ IDEA.
@@ -21,22 +26,11 @@ import android.app.AlertDialog;
  * Time: 下午4:41
  */
 
-/**
- * the database for task-entry should have:
- * 1.name
- * 2.data to occur/finish
- * 3.owner
- * 4.
-
-
-  */
-
 
 public class TodoActivity extends Activity {
     private static final int ADD_TASK = 1;
     private static final int ADD_REGULAR = 2;
     private static final int DIALOG_TASK_ADD = 10;
-
 
     public void onCreate(Bundle savedInstanceState) {
         ListView listView;
@@ -54,42 +48,41 @@ public class TodoActivity extends Activity {
             }
         });
 
-        Cursor c = managedQuery(TaskProvider.CONTENT_URI , null, null, null, "todo asc");
+//        Cursor c = managedQuery(TaskProvider.CONTENT_URI , null, null, null, "todo asc");
+//
+//        String[] from = {
+//                TaskProvider._ID,
+//                TaskProvider.TODO,
+//                TaskProvider.STATE,
+//        };
 
-        String[] from = {
-                TaskProvider._ID,
-                TaskProvider.TODO,
-                TaskProvider.STATE,
-                TaskProvider.COLOR
-        };
+//        int[] to = {
+//                R.id.sqlID,
+//                R.id.checkBox,
+//                R.id.checkBox,
+//                R.id.colorBar
+//        };
 
-        int[] to = {
-                R.id.sqlID,
-                R.id.checkBox,
-                R.id.checkBox,
-                R.id.colorBar
-        };
+//        SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.task_entry, c, from, to);
 
-        SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.task_entry, c, from, to);
-
-        adapter.setViewBinder(new TaskViewBinder());
-        listView.setAdapter(adapter);
-        listView.setTextFilterEnabled(true);
+//        adapter.setViewBinder(new TaskViewBinder());
+//        listView.setAdapter(adapter);
+//        listView.setTextFilterEnabled(true);
 
         listView.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        /// Change in the Content Provider
-                        CheckBox cb = (CheckBox) view.findViewById(R.id.checkBox);
-                        TextView tv = (TextView) view.findViewById(R.id.sqlID);
-                        ContentValues values = new ContentValues();
-
-                        /// Toggle Value
-                        values.put(TaskProvider.STATE, cb.isChecked() ? 0 : 1);
-
-                        /// Update it
-                        getContentResolver().update(Uri.parse(TaskProvider.CONTENT_URI
-                                + "/" + tv.getText()), values, null, null);
+//                        /// Change in the Content Provider
+//                        CheckBox cb = (CheckBox) view.findViewById(R.id.checkBox);
+//                        TextView tv = (TextView) view.findViewById(R.id.sqlID);
+//                        ContentValues values = new ContentValues();
+//
+//                        /// Toggle Value
+//                        values.put(TaskProvider.STATE, cb.isChecked() ? 0 : 1);
+//
+//                        /// Update it
+//                        getContentResolver().update(Uri.parse(TaskProvider.CONTENT_URI
+//                                + "/" + tv.getText()), values, null, null);
                     }
                 }
         );
@@ -98,15 +91,14 @@ public class TodoActivity extends Activity {
                 new AdapterView.OnItemLongClickListener() {
                     public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                         /// Change in the Content Provider
-                        TextView tv = (TextView) view.findViewById(R.id.sqlID);
-                        CheckBox cb = (CheckBox) view.findViewById(R.id.checkBox);
+//                        TextView tv = (TextView) view.findViewById(R.id.sqlID);
+//                        CheckBox cb = (CheckBox) view.findViewById(R.id.checkBox);
 
                         /// Call the Editor
-                        Intent i = new Intent(TodoActivity.this, TaskEditor.class);
-                        i.putExtra("todo", cb.getText());
-                        i.putExtra("id", tv.getText());
-                        i.putExtra("state", "null");
-                        startActivityForResult(i, ADD_REGULAR);
+//                        i.putExtra("todo", cb.getText());
+//                        i.putExtra("id", tv.getText());
+//                        i.putExtra("state", "null");
+//                        startActivityForResult(i, ADD_REGULAR);
 
                         return true; // if false is returned onItemClick() will do the job
                     }
@@ -166,29 +158,67 @@ public class TodoActivity extends Activity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
         super.onActivityResult(requestCode, resultCode, data);
+        Date dt = new Date();
         if(resultCode == RESULT_OK)
         {
             if(requestCode == ADD_TASK) {
-                long deadline = data.getLongExtra("deadline", 0);
+                String deadline = data.getStringExtra("deadline");
                 int priority = data.getIntExtra("priority", 0);
                 String name = data.getStringExtra("name");
+
                 //get create time from epoch
 
-                Log.i("TEST", Long.toString(deadline));
+                Log.i("TEST", deadline);
                 Log.i("Priority", Integer.toString(priority));
+                Log.i("Name", name);
+
+//                SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+                Toast.makeText(TodoActivity.this, name, 8000).show();
 
                 ContentValues values = new ContentValues();
-//                values.put(TaskProvider.TODO, todo);
-//                values.put(TaskProvider.STATE, 0);
-//                getContentResolver().insert(TaskProvider.CONTENT_URI, values);
+                values.put(Tasks.Task.USER_ID, 0);
+                values.put(Tasks.Task.NAME, name);
+//                try {
+//                    values.put(Tasks.Task.DEADLINE,
+//                            formatter.parse(deadline).getTime());
+//                } catch (ParseException e) {
+//                    e.printStackTrace();
+//                }
+                values.put(Tasks.Task.DEADLINE, deadline);
+                values.put(Tasks.Task.DONE_TIME, 0);
+                values.put(Tasks.Task.DIRTY, 1);
+                values.put(Tasks.Task.CREATE_TIME, dt.getTime());
+                values.put(Tasks.Task.STATUS,
+                        Tasks.Task.getStatus(deadline));
+                values.put(Tasks.Task.PRIORITY, priority);
+                values.put(Tasks.Task.DONE_TIME, 0);
+                values.put(Tasks.Task.WORKLOAD, "");
+                values.put(Tasks.Task.DONE_WORKLOAD, "");
+
+                getContentResolver().insert(Tasks.Task.TASKS_URI, values);
             }
             if(requestCode == ADD_REGULAR) {
+                //六五四三二一日 : cycle : 二进制
                 int cycle = data.getIntExtra("cycle", 0);
                 String name = data.getStringExtra("name");
+                int priority = data.getIntExtra("priority", 0);
                 String time = data.getStringExtra("time");
 
                 ContentValues values = new ContentValues();
+                values.put(Regulars.Regular.USER_ID, 0);
+                values.put(Regulars.Regular.NAME, name);
+                values.put(Regulars.Regular.DIRTY, 1);
+                values.put(Regulars.Regular.CREATE_TIME, dt.getTime());
+                values.put(Regulars.Regular.STATUS,
+                        Regulars.Regular.getStatus(cycle));
+                values.put(Regulars.Regular.PRIORITY, priority);
+                values.put(Regulars.Regular.WORKLOAD, "");
+                values.put(Regulars.Regular.CYCLE, cycle);
+                values.put(Regulars.Regular.TIME, time);
 
+                getContentResolver().insert(Regulars.Regular.REGULARS_URI, values);
+
+                Toast.makeText(TodoActivity.this, name, 8000).show();
             }
         }
     }

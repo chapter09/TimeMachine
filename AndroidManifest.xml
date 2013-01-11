@@ -31,12 +31,13 @@
         <activity android:name=".About"
                   android:label="About Time Machine"
                   android:theme="@android:style/Theme.Dialog"/>
-        <activity android:name=".TaskEditor" />
         <activity android:name=".SyncActivity"/>
         <activity android:name=".AddTask"
                   android:theme="@android:style/Theme.Dialog"/>
         <activity android:name=".SetTimeActivity"/>
         <activity android:name=".AddRegular"
                   android:theme="@android:style/Theme.Dialog"/>
+        <provider android:name=".TaskProvider"
+                  android:authorities="com.timemachine.TaskProvider"/>
     </application>
 </manifest> 

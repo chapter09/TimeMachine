@@ -2,10 +2,28 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="fill_parent"
-              android:layout_height="wrap_content">
+              android:layout_height="wrap_content" android:orientation="vertical">
+    <TextView
+            android:text="@string/task"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:background="#347fdf"
+            android:layout_marginTop="4dp"
+            />
     <ListView
-            android:id="@+id/today_list"
-            android:layout_width="match_parent"
+            android:id="@+id/today_task_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+    </ListView>
+    <TextView
+            android:text="@string/regular"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:background="#cb6315"
+            />
+    <ListView
+            android:id="@+id/today_regular_list"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content" >
     </ListView>
 </LinearLayout>

@@ -5,15 +5,8 @@
               android:layout_height="wrap_content"
               android:padding="0dp" >
 
-    <TextView
-            android:id="@+id/colorBar"
-            android:layout_width="10dp"
-            android:layout_height="fill_parent"
-            android:text="@string/colorBarDefault" >
-    </TextView>
-
     <CheckBox
-            android:id="@+id/checkBox"
+            android:id="@+id/taskCheck"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="false"
@@ -25,11 +18,18 @@
     </CheckBox>
 
     <TextView
-            android:id="@+id/sqlID"
+            android:id="@+id/taskName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/sqlIDDefault"
-            android:visibility="gone" >
+            >
+    </TextView>
+
+    <TextView
+            android:id="@+id/deadline"
+            android:gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right">
     </TextView>
 
 </LinearLayout>

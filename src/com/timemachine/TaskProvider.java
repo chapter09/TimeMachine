@@ -5,7 +5,6 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.database.sqlite.SQLiteQueryBuilder;
 import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
@@ -18,53 +17,57 @@ import android.util.Log;
  */
 
 public class TaskProvider extends ContentProvider {
-    public static final String PROVIDER_NAME = "com.timemachine.provider";
-    public static final Uri CONTENT_URI = Uri.parse("content://"+ PROVIDER_NAME + "/todos");
+    private static final int TASKS = 1;
+    private static final int TASK = 2;
+    private static final int REGULARS = 3;
+    private static final int REGULAR = 4;
 
-    public static final String _ID = "_id";
-    public static final String TODO = "todo";
-    public static final String STATE = "state";
-    public static final String COLOR = "color";
+    private static final UriMatcher uriMatcher
+            = new UriMatcher(UriMatcher.NO_MATCH);
 
-    // fields for Marten:
-    public static final String SYNC_SOURCE = "sync_source";
-    public static final String SYNC_VERSION = "sync_version";
-    public static final String UID = "uid";
-    public static final String ORIGINAL_INSTANCE = "original_instance";
-    public static final String ORIGINAL_INSTANCE_TIME = "original_instance_time";
-    public static final String DIRTY = "dirty";
-    public static final String DELETED = "deleted";
-
-
-    private static final int TODOS = 1;
-    private static final int TODO_ID = 2;
-
-    private static final UriMatcher uriMatcher;
     static
     {
-        uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
-        uriMatcher.addURI(PROVIDER_NAME, "todos", TODOS);
-        uriMatcher.addURI(PROVIDER_NAME, "todos/#", TODO_ID);
+        uriMatcher.addURI(Tasks.AUTHORITY, "tasks", TASKS);
+        uriMatcher.addURI(Tasks.AUTHORITY, "task/#", TASK);
+        uriMatcher.addURI(Regulars.AUTHORITY, "regulars", REGULARS);
+        uriMatcher.addURI(Regulars.AUTHORITY, "regular/#", REGULAR);
     }
 
-    private SQLiteDatabase tasksDB;
+    private DatabaseHelper dbHelper;
     private static final String DATABASE_NAME = "TimeMachineDataBase";
-    private static final String DATABASE_TABLE = "Todos";
+    private static final String DATABASE_TASK_TABLE = "tasks";
+    private static final String DATABASE_REGULAR_TABLE = "regulars";
     private static final int DATABASE_VERSION = 1;
-    private static final String DATABASE_CREATE =
-            "create table " + DATABASE_TABLE +
+
+    private static final String CREATE_TASK_TABLE =
+            "create table " + DATABASE_TASK_TABLE +
                     " (_id integer primary key autoincrement, "+
-                    TODO +" text not null, "+
-                    STATE+" int not null, "+
-                    COLOR+" int not null, "+
-                    // Fields for Marten:
-                    SYNC_SOURCE +" text, "+
-                    SYNC_VERSION +" text, "+
-                    UID +" text, " +
-                    ORIGINAL_INSTANCE +" int, "+
-                    ORIGINAL_INSTANCE_TIME + " long, "+
-                    DIRTY +" int, "+
-                    DELETED +" int);";
+                    Tasks.Task.USER_ID +" int, "+
+                    Tasks.Task.NAME +" text not null, "+
+                    Tasks.Task.STATUS +" int not null, "+
+                    Tasks.Task.PRIORITY +" int not null, "+
+                    Tasks.Task.CREATE_TIME +" int, "+
+                    Tasks.Task.DEADLINE +" text not null, "+
+                    Tasks.Task.DONE_TIME +" int, "+
+                    Tasks.Task.TYPE +" int, "+
+                    Tasks.Task.DIRTY +" int not null, "+
+                    Tasks.Task.DONE_WORKLOAD + " text, "+
+                    Tasks.Task.WORKLOAD + " text);";
+
+    private static final String CREATE_REGULAR_TABLE =
+            "create table " + DATABASE_REGULAR_TABLE +
+                    " (_id integer primary key autoincrement, "+
+                    Regulars.Regular.USER_ID +" int, "+
+                    Regulars.Regular.NAME +" text not null, "+
+                    Regulars.Regular.STATUS +" int not null, "+
+                    Regulars.Regular.PRIORITY +" int not null, "+
+                    Regulars.Regular.CREATE_TIME +" int, "+
+                    Regulars.Regular.TIME +" text not null, "+
+                    Regulars.Regular.CYCLE +" int not null, "+
+                    Regulars.Regular.TYPE +" int, "+
+                    Regulars.Regular.DIRTY +" int, "+
+                    Regulars.Regular.WORKLOAD + " text);";
+
 
     private static class DatabaseHelper extends SQLiteOpenHelper
     {
@@ -75,7 +78,8 @@ public class TaskProvider extends ContentProvider {
         @Override
         public void onCreate(SQLiteDatabase db)
         {
-            db.execSQL(DATABASE_CREATE);
+            db.execSQL(CREATE_TASK_TABLE);
+            db.execSQL(CREATE_REGULAR_TABLE);
         }
 
         @Override
@@ -90,83 +94,139 @@ public class TaskProvider extends ContentProvider {
         }
     }
 
-
     @Override
     public boolean onCreate() {
-        Context context = getContext();
-        DatabaseHelper dbHelper = new DatabaseHelper(context);
-        tasksDB = dbHelper.getWritableDatabase();
-        return (tasksDB != null);
+        dbHelper = new DatabaseHelper(this.getContext());
+        return true;
     }
-
 
     @Override
     public Cursor query(Uri uri, String[] projection, String selection,
                         String[] selectionArgs, String sortOrder) {
-        SQLiteQueryBuilder sqlBuilder = new SQLiteQueryBuilder();
-        sqlBuilder.setTables(DATABASE_TABLE);
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        long id;
+        String where;
+        int uriType = uriMatcher.match(uri);
 
-        if (uriMatcher.match(uri) == TODO_ID)
-            //---if getting a particular book---
-            sqlBuilder.appendWhere(
-                    _ID + " = " + uri.getPathSegments().get(1));
+        switch (uriType) {
+            case TASKS:
+                return db.query(DATABASE_TASK_TABLE, projection,
+                        selection, selectionArgs, null, null, sortOrder);
+            case TASK:
+                id = ContentUris.parseId(uri);
+                where = Tasks.Task._ID + "=" + id;
+                if (selection != null && !"".equals(selection)) {
+                    where = where + " and " + selection;
+                }
+                return db.query(DATABASE_TASK_TABLE, projection, where,
+                        selectionArgs, null, null, sortOrder);
 
-        if (sortOrder == null || sortOrder == "")
-            sortOrder = TODO;
+            case REGULARS:
+                return db.query(DATABASE_REGULAR_TABLE, projection,
+                        selection, selectionArgs, null, null, sortOrder);
 
-        Cursor c = sqlBuilder.query(
-                tasksDB,
-                projection,
-                selection,
-                selectionArgs,
-                null,
-                null,
-                sortOrder);
+            case REGULAR:
+                id = ContentUris.parseId(uri);
+                where = Regulars.Regular._ID + "=" + id;
+                if (selection != null && !"".equals(selection)) {
+                    where = where + " and " + selection;
+                }
+                return db.query(DATABASE_REGULAR_TABLE, projection, where,
+                        selectionArgs, null, null, sortOrder);
+            default:
+                throw new IllegalArgumentException("Unknown URI: " + uri);
+        }
 
-        //---register to watch a content URI for changes---
-        c.setNotificationUri(getContext().getContentResolver(), uri);
-        return c;
     }
 
     @Override
     public String getType(Uri uri) {
+        switch (uriMatcher.match(uri)) {
+            case TASKS:
+                return "vnd.android.cursor.dir/com.timemachine.task_dict";
+            case REGULARS:
+                return "vnd.android.cursor.dir/com.timemachine.regular_dict";
+            case TASK:
+                return "vnd.android.cursor.item/com.timemachine.regular_dict";
+            case REGULAR:
+                return "vnd.android.cursor.item/com.timemachine.regular_dict";
+        }
         return null;
     }
 
     @Override
     public Uri insert(Uri uri, ContentValues contentValues) {
-    //---add a new book---
-        long rowID = tasksDB.insert(
-                DATABASE_TABLE, "", contentValues);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        int uriType = uriMatcher.match(uri);
+        Log.e("URI_TYPE", Integer.toString(uriType));
+        long rowId;
 
-        //---if added successfully---
-        if (rowID>0)
-        {
-            Uri _uri = ContentUris.withAppendedId(CONTENT_URI, rowID);
-            getContext().getContentResolver().notifyChange(_uri, null);
-            return _uri;
+        switch (uriType) {
+            case TASKS:
+                Log.e("INSERT", DATABASE_TASK_TABLE);
+                rowId = db.insert(DATABASE_TASK_TABLE, null, contentValues);
+                if (rowId > 0) {
+                    Uri taskUri = ContentUris.withAppendedId(uri, rowId);
+                    getContext().getContentResolver().notifyChange(taskUri, null);
+                    return taskUri;
+                } else {
+                    return null;
+                }
+
+            case REGULARS:
+                Log.e("INSERT", DATABASE_REGULAR_TABLE);
+                rowId = db.insert(DATABASE_REGULAR_TABLE, null, contentValues);
+                if (rowId > 0) {
+                    Uri regularUri = ContentUris.withAppendedId(uri, rowId);
+                    getContext().getContentResolver().notifyChange(regularUri, null);
+                    return regularUri;
+                } else {
+                    return null;
+                }
+
+            default:
+                throw new SQLException("Fail to insert row into " + uri);
         }
-        throw new SQLException("Failed to insert row into " + uri);    }
+    }
 
     @Override
-    public int delete(Uri uri, String s, String[] strings) {
+    public int delete(Uri uri, String selection, String[] selectionArgs) {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
         int count=0;
+        long id;
+
         switch (uriMatcher.match(uri)){
-            case TODOS:
-                count = tasksDB.delete(
-                        DATABASE_TABLE,
-                        s,
-                        strings);
+            case TASK:
+                count = db.delete(
+                        DATABASE_TASK_TABLE,
+                        selection,
+                        selectionArgs);
                 break;
-            case TODO_ID:
-                String id = uri.getPathSegments().get(1);
-                count = tasksDB.delete(
-                        DATABASE_TABLE,
-                        _ID + " = " + id +
-                                (!TextUtils.isEmpty(s) ? " AND (" +
-                                        s + ')' : ""),
-                        strings);
+            case TASKS:
+                id = ContentUris.parseId(uri);
+                count = db.delete(
+                        DATABASE_TASK_TABLE,
+                        Tasks.Task._ID + " = " + id +
+                                (!TextUtils.isEmpty(selection) ? " AND (" +
+                                        selection + ')' : ""),
+                        selectionArgs);
                 break;
+            case REGULARS:
+                count = db.delete(
+                        DATABASE_REGULAR_TABLE,
+                        selection,
+                        selectionArgs);
+                break;
+            case REGULAR:
+                id = ContentUris.parseId(uri);
+                count = db.delete(
+                        DATABASE_REGULAR_TABLE,
+                        Regulars.Regular._ID + " = " + id +
+                                (!TextUtils.isEmpty(selection) ? " AND (" +
+                                        selection + ')' : ""),
+                        selectionArgs);
+                break;
+
             default: throw new IllegalArgumentException(
                     "Unknown URI " + uri);
         }
@@ -177,19 +237,36 @@ public class TaskProvider extends ContentProvider {
     public int update(Uri uri, ContentValues contentValues,
                       String selection, String[] selectionArgs) {
         int count = 0;
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
         switch (uriMatcher.match(uri)){
-            case TODOS:
-                count = tasksDB.update(
-                        DATABASE_TABLE,
+            case TASKS:
+                count = db.update(
+                        DATABASE_TASK_TABLE,
                         contentValues,
                         selection,
                         selectionArgs);
                 break;
-            case TODO_ID:
-                count = tasksDB.update(
-                        DATABASE_TABLE,
+            case TASK:
+                count = db.update(
+                        DATABASE_TASK_TABLE,
                         contentValues,
-                        _ID + " = " + uri.getPathSegments().get(1) +
+                        Tasks.Task._ID + " = " + ContentUris.parseId(uri) +
+                                (!TextUtils.isEmpty(selection) ? " AND (" +
+                                        selection + ')' : ""),
+                        selectionArgs);
+                break;
+            case REGULARS:
+                count = db.update(
+                        DATABASE_REGULAR_TABLE,
+                        contentValues,
+                        selection,
+                        selectionArgs);
+                break;
+            case REGULAR:
+                count = db.update(
+                        DATABASE_REGULAR_TABLE,
+                        contentValues,
+                        Regulars.Regular._ID + " = " + ContentUris.parseId(uri) +
                                 (!TextUtils.isEmpty(selection) ? " AND (" +
                                         selection + ')' : ""),
                         selectionArgs);
