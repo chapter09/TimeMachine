@@ -35,25 +35,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="226750d2-3bff-4ce6-845c-d6248f323856" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/timemachine/TaskProvider.java" afterPath="$PROJECT_DIR$/src/com/timemachine/TaskProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/timemachine/TodayActivity.java" afterPath="$PROJECT_DIR$/src/com/timemachine/TodayActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/sync.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/timemachine/TodoActivity.java" afterPath="$PROJECT_DIR$/src/com/timemachine/TodoActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/task_entry.xml" afterPath="$PROJECT_DIR$/res/layout/task_entry.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/today.xml" afterPath="$PROJECT_DIR$/res/layout/today.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/todo.xml" afterPath="$PROJECT_DIR$/res/layout/todo.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="dcd43c71-1e66-4789-b36f-9bc1406a859d" name="Rejected commit: Default" comment="add settings&#10;" />
     <ignored path="TimeMachine.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357932374794" ignored="false" />
+    <file path="/Dummy.txt" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357936463469" ignored="false" />
     <file path="/fragment.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357936186044" ignored="false" />
     <file path="$PROJECT_DIR$/.idea/modules.xml" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1355158197225" ignored="false" />
     <file path="/TodayActivity.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357932052733" ignored="false" />
     <file path="$USER_HOME$/Downloads/todo/caldavtodo/project.properties" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1355646345056" ignored="false" />
-    <file path="/a.xml" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1355647580848" ignored="false" />
-    <file path="/TodoActivity.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357936130663" ignored="false" />
+    <file path="/a.xml" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357936697412" ignored="false" />
+    <file path="/TodoActivity.java" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357936590179" ignored="false" />
     <file path="/todo.xml" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357934817274" ignored="false" />
     <file path="/strings.xml" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357927789718" ignored="false" />
     <file path="/task_entry.xml" changelist="226750d2-3bff-4ce6-845c-d6248f323856" time="1357935536620" ignored="false" />
@@ -223,7 +218,7 @@
           <file leaf-file-name="TodoActivity.java" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/timemachine/TodoActivity.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="139" column="16" selection-start="5599" selection-end="5599" vertical-scroll-proportion="0.85504884">
+                <state line="129" column="85" selection-start="5155" selection-end="5169" vertical-scroll-proportion="0.29982364">
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#1115#1279#0" expanded="true" />
@@ -302,7 +297,7 @@
           <file leaf-file-name="TodayActivity.java" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/timemachine/TodayActivity.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="19" column="43" selection-start="642" selection-end="642" vertical-scroll-proportion="0.1973466">
+                <state line="19" column="43" selection-start="642" selection-end="642" vertical-scroll-proportion="0.21402878">
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -322,6 +317,7 @@
   <component name="Git.Settings">
     <option name="SYNC_SETTING" value="DONT" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="WARN_ABOUT_CRLF" value="false" />
   </component>
   <component name="GitLogSettings">
     <option name="myDateState">
@@ -757,14 +753,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/com/timemachine" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="preferences.sourceCode.XML" />
+    <property name="options.lastSelected" value="vcs.Git" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/todo/datetimepicker" />
     <property name="AndroidLayoutSelectedEditor" value="text-editor" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -1051,7 +1047,11 @@
       <created>1357932385617</created>
       <updated>1357932385617</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Todo / Today is ready">
+      <created>1357936486549</created>
+      <updated>1357936486549</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1062,13 +1062,13 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2767365" sideWeight="0.05715812" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32855567" sideWeight="0.50267094" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.6707989" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32855567" sideWeight="0.4957265" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32855567" sideWeight="0.49358973" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1298077" sideWeight="0.7232635" order="0" side_tool="false" content_ui="combo" x="1661" y="84" width="273" height="936" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1298077" sideWeight="0.6714443" order="0" side_tool="false" content_ui="combo" x="1661" y="84" width="273" height="936" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24035281" sideWeight="0.5315171" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13247864" sideWeight="0.7596472" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1078,7 +1078,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39911798" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32855567" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2767365" sideWeight="0.9391026" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2767365" sideWeight="0.9391026" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16118634" sideWeight="0.41493776" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39957264" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294347" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1128,7 +1128,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="ListView is ready" />
+    <option name="LAST_COMMIT_MESSAGE" value="Todo / Today is ready" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1146,6 +1146,7 @@
     <MESSAGE value="add Add Task" />
     <MESSAGE value="add Add Regular" />
     <MESSAGE value="ListView is ready" />
+    <MESSAGE value="Todo / Today is ready" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1298,7 +1299,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/timemachine/TodayActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="43" selection-start="642" selection-end="642" vertical-scroll-proportion="0.1973466">
+        <state line="19" column="43" selection-start="642" selection-end="642" vertical-scroll-proportion="0.21402878">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1323,7 +1324,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/timemachine/TodoActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="16" selection-start="5599" selection-end="5599" vertical-scroll-proportion="0.85504884">
+        <state line="129" column="85" selection-start="5155" selection-end="5169" vertical-scroll-proportion="0.29982364">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1115#1279#0" expanded="true" />
@@ -1350,7 +1351,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited>Android</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

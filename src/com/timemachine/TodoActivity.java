@@ -119,9 +119,7 @@ public class TodoActivity extends Activity {
     private final class TasksObserver extends ContentObserver {
         public TasksObserver(Handler handler) {
             super(handler);
-
         }
-
         public void onChange(boolean selfChange) {
             Cursor task_cursor = getContentResolver().query(Tasks.Task.TASKS_URI,
                     null, "status = 1", null, "_id asc");
