@@ -158,12 +158,10 @@ public class TaskProvider extends ContentProvider {
     public Uri insert(Uri uri, ContentValues contentValues) {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         int uriType = uriMatcher.match(uri);
-        Log.e("URI_TYPE", Integer.toString(uriType));
         long rowId;
 
         switch (uriType) {
             case TASKS:
-                Log.e("INSERT", DATABASE_TASK_TABLE);
                 rowId = db.insert(DATABASE_TASK_TABLE, null, contentValues);
                 if (rowId > 0) {
                     Uri taskUri = ContentUris.withAppendedId(uri, rowId);
@@ -174,7 +172,6 @@ public class TaskProvider extends ContentProvider {
                 }
 
             case REGULARS:
-                Log.e("INSERT", DATABASE_REGULAR_TABLE);
                 rowId = db.insert(DATABASE_REGULAR_TABLE, null, contentValues);
                 if (rowId > 0) {
                     Uri regularUri = ContentUris.withAppendedId(uri, rowId);

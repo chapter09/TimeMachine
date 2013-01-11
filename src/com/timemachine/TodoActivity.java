@@ -6,16 +6,16 @@ import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.ContentObserver;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.*;
 import android.app.AlertDialog;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
@@ -31,14 +31,14 @@ public class TodoActivity extends Activity {
     private static final int ADD_TASK = 1;
     private static final int ADD_REGULAR = 2;
     private static final int DIALOG_TASK_ADD = 10;
+    private ListView taskListView;
+    private ListView regularListView;
 
     public void onCreate(Bundle savedInstanceState) {
-        ListView listView;
         Button add_btn;
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.todo);
-        listView = (ListView)findViewById(R.id.list);
 
         add_btn = (Button) findViewById(R.id.AddButton);
         add_btn.setOnClickListener(new View.OnClickListener() {
@@ -47,63 +47,102 @@ public class TodoActivity extends Activity {
                 showDialog(DIALOG_TASK_ADD);
             }
         });
+        getContentResolver().registerContentObserver(
+                Uri.parse("content://com.timemachine.TaskProvider"), true,
+                new TasksObserver(new Handler()));
 
-//        Cursor c = managedQuery(TaskProvider.CONTENT_URI , null, null, null, "todo asc");
-//
-//        String[] from = {
-//                TaskProvider._ID,
-//                TaskProvider.TODO,
-//                TaskProvider.STATE,
-//        };
+        ContentResolver cr = getContentResolver();
+        Cursor task_cursor = cr.query(Tasks.Task.TASKS_URI,
+                null, "status < 2", null, "_id asc");
+        startManagingCursor(task_cursor);
 
-//        int[] to = {
-//                R.id.sqlID,
-//                R.id.checkBox,
-//                R.id.checkBox,
-//                R.id.colorBar
-//        };
+        Cursor regular_cursor = cr.query(Regulars.Regular.REGULARS_URI,
+                null, "status < 2", null, "_id asc");
+        startManagingCursor(regular_cursor);
 
-//        SimpleCursorAdapter adapter = new SimpleCursorAdapter(this, R.layout.task_entry, c, from, to);
+        taskListView = (ListView) findViewById(R.id.todo_task_list);
+        regularListView = (ListView) findViewById(R.id.todo_regular_list);
 
-//        adapter.setViewBinder(new TaskViewBinder());
-//        listView.setAdapter(adapter);
-//        listView.setTextFilterEnabled(true);
+        String[] task_from = {Tasks.Task.NAME, Tasks.Task.DEADLINE};
+        int[] task_to = {R.id.taskName, R.id.deadline};
+        String[] regular_from = {Regulars.Regular.NAME, Regulars.Regular.CYCLE};
+        int[] regular_to = {R.id.taskName, R.id.deadline};
 
-        listView.setOnItemClickListener(
-                new AdapterView.OnItemClickListener() {
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        SimpleCursorAdapter task_adapter = new SimpleCursorAdapter(this,
+                R.layout.task_entry, task_cursor, task_from, task_to);
+        taskListView.setAdapter(task_adapter);
+
+        SimpleCursorAdapter regular_adapter = new SimpleCursorAdapter(this,
+                R.layout.task_entry, regular_cursor, regular_from, regular_to);
+        regularListView.setAdapter(regular_adapter);
+
+
+//        listView.setOnItemClickListener(
+//                new AdapterView.OnItemClickListener() {
+//                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+////                        /// Change in the Content Provider
+////                        CheckBox cb = (CheckBox) view.findViewById(R.id.checkBox);
+////                        TextView tv = (TextView) view.findViewById(R.id.sqlID);
+////                        ContentValues values = new ContentValues();
+////
+////                        /// Toggle Value
+////                        values.put(TaskProvider.STATE, cb.isChecked() ? 0 : 1);
+////
+////                        /// Update it
+////                        getContentResolver().update(Uri.parse(TaskProvider.CONTENT_URI
+////                                + "/" + tv.getText()), values, null, null);
+//                    }
+//                }
+//        );
+
+//        listView.setOnItemLongClickListener(
+//                new AdapterView.OnItemLongClickListener() {
+//                    public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
 //                        /// Change in the Content Provider
-//                        CheckBox cb = (CheckBox) view.findViewById(R.id.checkBox);
-//                        TextView tv = (TextView) view.findViewById(R.id.sqlID);
-//                        ContentValues values = new ContentValues();
+////                        TextView tv = (TextView) view.findViewById(R.id.sqlID);
+////                        CheckBox cb = (CheckBox) view.findViewById(R.id.checkBox);
 //
-//                        /// Toggle Value
-//                        values.put(TaskProvider.STATE, cb.isChecked() ? 0 : 1);
+//                        /// Call the Editor
+////                        i.putExtra("todo", cb.getText());
+////                        i.putExtra("id", tv.getText());
+////                        i.putExtra("state", "null");
+////                        startActivityForResult(i, ADD_REGULAR);
 //
-//                        /// Update it
-//                        getContentResolver().update(Uri.parse(TaskProvider.CONTENT_URI
-//                                + "/" + tv.getText()), values, null, null);
-                    }
-                }
-        );
+//                        return true; // if false is returned onItemClick() will do the job
+//                    }
+//                }
+//        );
+    }
 
-        listView.setOnItemLongClickListener(
-                new AdapterView.OnItemLongClickListener() {
-                    public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                        /// Change in the Content Provider
-//                        TextView tv = (TextView) view.findViewById(R.id.sqlID);
-//                        CheckBox cb = (CheckBox) view.findViewById(R.id.checkBox);
 
-                        /// Call the Editor
-//                        i.putExtra("todo", cb.getText());
-//                        i.putExtra("id", tv.getText());
-//                        i.putExtra("state", "null");
-//                        startActivityForResult(i, ADD_REGULAR);
 
-                        return true; // if false is returned onItemClick() will do the job
-                    }
-                }
-        );
+    private final class TasksObserver extends ContentObserver {
+        public TasksObserver(Handler handler) {
+            super(handler);
+
+        }
+
+        public void onChange(boolean selfChange) {
+            Cursor task_cursor = getContentResolver().query(Tasks.Task.TASKS_URI,
+                    null, "status = 1", null, "_id asc");
+            startManagingCursor(task_cursor);
+            taskListView = (ListView) findViewById(R.id.today_task_list);
+            String[] task_from = {Tasks.Task.NAME, Tasks.Task.DEADLINE};
+            int[] task_to = {R.id.taskName, R.id.deadline};
+            SimpleCursorAdapter task_adapter = new SimpleCursorAdapter(getBaseContext(),
+                    R.layout.task_entry, task_cursor, task_from, task_to);
+            taskListView.setAdapter(task_adapter);
+
+            regularListView = (ListView) findViewById(R.id.today_regular_list);
+            Cursor regular_cursor = getContentResolver().query(Regulars.Regular.REGULARS_URI,
+                    null, "status = 1", null, "_id asc");
+            startManagingCursor(regular_cursor);
+            String[] regular_from = {Regulars.Regular.NAME, Regulars.Regular.CYCLE};
+            int[] regular_to = {R.id.taskName, R.id.deadline};
+            SimpleCursorAdapter regular_adapter = new SimpleCursorAdapter(getBaseContext(),
+                    R.layout.task_entry, regular_cursor, regular_from, regular_to);
+            regularListView.setAdapter(regular_adapter);
+        }
     }
 
     @Override

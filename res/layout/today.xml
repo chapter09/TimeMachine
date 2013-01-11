@@ -8,12 +8,12 @@
             android:layout_height="wrap_content"
             android:layout_width="fill_parent"
             android:background="#347fdf"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="1dp"
             />
     <ListView
             android:id="@+id/today_task_list"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="260dp">
     </ListView>
     <TextView
             android:text="@string/regular"
@@ -24,6 +24,6 @@
     <ListView
             android:id="@+id/today_regular_list"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
     </ListView>
 </LinearLayout>

@@ -3,7 +3,7 @@
               android:id="@+id/rowLayout"
               android:layout_width="fill_parent"
               android:layout_height="wrap_content"
-              android:padding="0dp" >
+              android:padding="0dp">
 
     <CheckBox
             android:id="@+id/taskCheck"
@@ -14,22 +14,29 @@
             android:focusable="false"
             android:focusableInTouchMode="false"
             android:paddingLeft="45dp"
-            android:text="@string/checkBoxDefault" >
+            android:text="@string/checkBoxDefault">
     </CheckBox>
+    <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+        <TableRow>
 
-    <TextView
-            android:id="@+id/taskName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            >
-    </TextView>
-
-    <TextView
-            android:id="@+id/deadline"
-            android:gravity="left"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right">
-    </TextView>
-
+            <TextView
+                    android:id="@+id/taskName"
+                    android:textSize="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+            </TextView>
+        </TableRow>
+        <TableRow>
+            <TextView
+                    android:id="@+id/deadline"
+                    android:textSize="9dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+            </TextView>
+        </TableRow>
+    </TableLayout>
 </LinearLayout>

@@ -10,7 +10,6 @@ import android.os.Handler;
 import android.widget.*;
 
 
-
 public class TodayActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -70,7 +69,6 @@ public class TodayActivity extends Activity {
             SimpleCursorAdapter regular_adapter = new SimpleCursorAdapter(getBaseContext(),
                     R.layout.task_entry, regular_cursor, regular_from, regular_to);
             regularListView.setAdapter(regular_adapter);
-
         }
     }
 }

@@ -1,41 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent">
-    <RelativeLayout
-            android:layout_marginTop="4dp"
-            android:id="@+id/InnerRelativeLayout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            >
-
-        <Button
-                android:text="@string/add_btn"
-                android:id="@+id/AddButton"
-                android:layout_alignParentRight="true"
+<TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    <TableRow>
+        <RelativeLayout
+                android:layout_marginTop="4dp"
+                android:id="@+id/InnerRelativeLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
                 >
-        </Button>
 
-        <EditText
-                android:id="@+id/name"
-                android:layout_width="fill_parent"
-                android:layout_toLeftOf="@id/AddButton"
+            <Button
+                    android:text="@string/add_btn"
+                    android:id="@+id/AddButton"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    >
+            </Button>
+
+            <EditText
+                    android:id="@+id/name"
+                    android:layout_width="fill_parent"
+                    android:layout_toLeftOf="@id/AddButton"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    >
+            </EditText>
+        </RelativeLayout>
+    </TableRow>
+    <TableRow>
+        <TextView
+                android:text="@string/task"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
+                android:layout_width="fill_parent"
+                android:background="#347fdf"
+                android:layout_marginTop="1dp"
+                />
+    </TableRow>
+    <TableRow>
+        <ListView
+                android:id="@+id/todo_task_list"
+                android:layout_width="fill_parent"
+                android:layout_height="190dp"
                 >
-        </EditText>
-    </RelativeLayout>
-    <ListView
-            android:id="@+id/list"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:fadingEdge="none">
-
-    </ListView>
-
-</LinearLayout>
+        </ListView>
+    </TableRow>
+    <TableRow>
+        <TextView
+                android:text="@string/regular"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:background="#cb6315"
+                />
+    </TableRow>
+    <TableRow>
+        <ListView
+                android:id="@+id/todo_regular_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+        </ListView>
+    </TableRow>
+</TableLayout>
